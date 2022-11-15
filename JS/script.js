@@ -41,5 +41,13 @@ const Team =[
 for(let i=0; i<Team.length; i++) {
     const teamUser = Team[i];
     console.log(teamUser);
-    TeamOutput.innerHTML += "<ul><li>" + teamUser.name + "</li><li> " + teamUser.jobTitle + "</li><li> " + teamUser.img + "</li></ul>";
+     //mostrare l'immagine per ogni utene
+    //  creo l'elemento img
+    const img = document.createElement("img");
+    //  aggiungo l'attributo src all'elemento img
+    img.src = "IMG/" + teamUser.img;
+    
+    TeamOutput.innerHTML += "<ul><li>" + teamUser.name + "</li><li> " + teamUser.jobTitle + "</li></ul>"; 
+    // stampo l'elemento img
+    TeamOutput.appendChild(img);
 }
